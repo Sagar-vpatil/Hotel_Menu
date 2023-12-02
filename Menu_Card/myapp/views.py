@@ -13,4 +13,7 @@ def add_menu(request):
 def admin_home(request):
     return render(request,"admin_home.html")
 
+def admin_login(request):
+    return render(request,"adminlogin.html")
+
 # Create your views here.
