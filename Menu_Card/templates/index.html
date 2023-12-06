@@ -1,11 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-</head>
-<body>
-  <h1><a href="admin_home">Admin Login</a></h1>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 class="mx-5"><a href="admin_login">Admin Login</a></h1>
+   <div class="container">
+    <h1 class="text-center">Menu-Crads</h1>
+    <div class="row mt-5">
+      {% for x in menu %}
+       <div class="col-sm-4">
+        <div class="card m-2">
+          <img src=" {{x.photo.url}} " alt="" class="card-img-top" height="200px">
+          <div class="card-body">
+            <h5 class="card-title text-center"> {{x.name}} </h5>
+           <h5 class="btn btn-info">   {{x.price}}₹    </h5>
+          </div>
+        
+          <div class="card-footer">
+            <small class="text-muted"> {{x.category}}  </small>
+          </div>
+        </div>
+       </div>
+
+      {% endfor %}
+    </div>
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
 </html>
