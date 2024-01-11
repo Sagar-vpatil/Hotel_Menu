@@ -28,5 +28,6 @@ urlpatterns = [
     path('add_menu',views.add_menu),
     path('admin_login', auth_views.LoginView.as_view(template_name='adminlogin.html', success_url='admin_home'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('sample',views.sample,name='sample'),
          
 ] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)

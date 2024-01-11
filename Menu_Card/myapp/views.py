@@ -25,4 +25,7 @@ def admin_home(request):
 def admin_login(request):
     return render(request,"adminlogin.html")
 
+def sample(request):
+    return render(request,"sample.html")
+
 # Create your views here.
